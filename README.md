@@ -189,3 +189,17 @@ To add/modify bots, edit `bot/multi_bot_config.py` in the `get_development_bot_c
 - Process isolation ensures one bot failure doesn't affect others
 - Graceful shutdown with `Ctrl+C` stops all bots
 - Individual bot status visible in console output
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+### What this means:
+- ✅ **Personal Use**: Use this code for your own trading bots
+- ✅ **Modification**: Modify and improve the code for your needs
+- ✅ **Learning**: Study the code for educational purposes
+- ✅ **Commercial Use**: Use in your own trading operations
+- ❌ **Reselling**: You cannot resell this code as a product
+- ❌ **Warranty**: No warranty or guarantee of trading performance
+
+**Disclaimer**: This software is for educational and personal use only. Trading involves substantial risk of loss and is not suitable for all investors. The authors are not responsible for any financial losses incurred through the use of this software.
