@@ -124,7 +124,6 @@ from ib_async import Ticker, Trade
 
 def should_cancel_order(ticker: Ticker, trade: Trade, order_time: datetime) -> bool:
     """Custom cancellation logic for MACD strategy"""
-    # Your cancellation logic here
     return False
 ```
 
