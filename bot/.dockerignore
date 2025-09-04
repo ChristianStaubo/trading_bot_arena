@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Database files
+*.db
+*.sqlite
+
+# Environment files
+.env
+.env.local
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+README.md
+docs/
+api/README.md
+
+# Test files
+test_*.py
+*_test.py
+tests/
+
+# Development files
+api/run.py
+api/test_example.py
+
+# macOS
+.DS_Store
+
+# IBKR logs and settings
+*.log
+settings.json
+
+# Trading data
+*.csv 

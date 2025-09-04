@@ -1,0 +1,51 @@
+services:
+  # Trading Bot API
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: trading_bot_api_dev
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql+asyncpg://${DB_USER}:${DB_PASSWORD}@postgres:5432/${DB_NAME}
+
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - trading_bot_network
+    restart: unless-stopped
+    volumes:
+      - .:/app
+
+  # PostgreSQL Database
+  postgres:
+    image: postgres:16
+    container_name: trading_bot_postgres_dev
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "5433:5432"
+    volumes:
+      - trading_bot_postgres_data_dev:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - trading_bot_network
+networks:
+  trading_bot_network:
+    name: trading_bot_network_dev
+    driver: bridge
+
+volumes:
+  trading_bot_postgres_data_dev:
+    name: trading_bot_postgres_data_dev

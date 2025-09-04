@@ -1,0 +1,40 @@
+[project]
+name = "trading-bot-api"
+version = "0.1.0"
+description = "FastAPI backend for trading bot data logging"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.115.13",
+    "sqlalchemy>=2.0.41",
+    "uvicorn>=0.34.3",
+    "python-dotenv>=1.1.1",
+    "python-multipart>=0.0.6",
+    "httpx>=0.28.1",
+    "asyncpg>=0.30.0",
+    "aiosqlite>=0.21.0",
+    "alembic>=1.13.0",
+    "psycopg2-binary>=2.9.10",
+    "greenlet>=3.2.3",
+    "pydantic>=2.0.0",
+    "pandas>=2.0.0",
+    "numpy>=2.3.1",
+    "scikit-learn>=1.7.0",
+    "plotly>=6.2.0",
+    "setuptools>=80.9.0",
+    "tomli-w>=1.2.0",
+    "pyotp>=2.9.0",
+    # Jupyter/IPython (development)
+    "ipykernel>=6.29.5",
+    "ipython>=9.4.0",
+    "nbformat>=5.10.4",
+    # GUI dependencies for different platforms
+    "pyobjc>=11.1; sys_platform == 'darwin'",
+    "pyobjc-core>=11.1; sys_platform == 'darwin'",
+    "pygetwindow>=0.0.9; sys_platform == 'darwin'",
+    "pyautogui>=0.9.54",                            # Works on both macOS and Linux
+    "psutil>=5.0.0",                                # Cross-platform system info
+    "eventkit==1.0.3",
+    "keyboard>=0.13.5",
+    "logtail-python>=0.2.8",                        # Logtail logging integration
+]
