@@ -195,6 +195,7 @@ To add/modify bots, edit `bot/multi_bot_config.py` in the `get_development_bot_c
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ### What this means:
+
 - ✅ **Personal Use**: Use this code for your own trading bots
 - ✅ **Modification**: Modify and improve the code for your needs
 - ✅ **Learning**: Study the code for educational purposes
